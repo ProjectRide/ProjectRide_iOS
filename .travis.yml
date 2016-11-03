@@ -1,4 +1,7 @@
 language: objective-c
+
+before_script:
+- pod repo update
  
 script:
 - xcodebuild build -scheme ProjectRide -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0'
