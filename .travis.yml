@@ -1,7 +1,6 @@
 language: objective-c
 
 before_script:
-- gem install cocoapods --verison 1.1.1
 - pod repo update
  
 script:
