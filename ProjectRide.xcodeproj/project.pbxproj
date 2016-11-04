@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8181228805CCC31985858F16 /* Pods_ProjectRide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87F2E4251E61CAEBB240A79 /* Pods_ProjectRide.framework */; };
 		84876CC6EB6B934102B47F8C /* Pods_ProjectRideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF7A3B649AEFD2825C631C6 /* Pods_ProjectRideTests.framework */; };
+		EA76F29A1DCCC879000D5814 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA76F2991DCCC879000D5814 /* User.swift */; };
+		EA76F29C1DCCF4A4000D5814 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA76F29B1DCCF4A4000D5814 /* UserTest.swift */; };
 		EACD4CC51DCBA0C000431684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD4CC41DCBA0C000431684 /* AppDelegate.swift */; };
 		EACD4CC71DCBA0C000431684 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD4CC61DCBA0C000431684 /* ViewController.swift */; };
 		EACD4CCA1DCBA0C000431684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACD4CC81DCBA0C000431684 /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 		C0685A764ACBB2D1DD5150F5 /* Pods-ProjectRideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectRideTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectRideTests/Pods-ProjectRideTests.release.xcconfig"; sourceTree = "<group>"; };
 		C69173FA6CD369A6E24F77D2 /* Pods-ProjectRideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectRideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectRideTests/Pods-ProjectRideTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E87F2E4251E61CAEBB240A79 /* Pods_ProjectRide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectRide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA76F2991DCCC879000D5814 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EA76F29B1DCCF4A4000D5814 /* UserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTest.swift; sourceTree = "<group>"; };
 		EACD4CC11DCBA0C000431684 /* ProjectRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACD4CC41DCBA0C000431684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EACD4CC61DCBA0C000431684 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EA76F2981DCCC86F000D5814 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				EA76F2991DCCC879000D5814 /* User.swift */,
+			);
+			name = Api;
+			sourceTree = "<group>";
+		};
 		EACD4CB81DCBA0C000431684 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +121,7 @@
 		EACD4CC31DCBA0C000431684 /* ProjectRide */ = {
 			isa = PBXGroup;
 			children = (
+				EA76F2981DCCC86F000D5814 /* Api */,
 				EACD4CC41DCBA0C000431684 /* AppDelegate.swift */,
 				EACD4CC61DCBA0C000431684 /* ViewController.swift */,
 				EACD4CC81DCBA0C000431684 /* Main.storyboard */,
@@ -123,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				EACD4CD91DCBA0C000431684 /* ProjectRideTests.swift */,
+				EA76F29B1DCCF4A4000D5814 /* UserTest.swift */,
 				EACD4CDB1DCBA0C000431684 /* Info.plist */,
 			);
 			path = ProjectRideTests;
@@ -307,7 +321,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FC379894FEFEBC93273EA5B6 /* [CP] Check Pods Manifest.lock */ = {
@@ -322,7 +336,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -334,6 +348,7 @@
 			files = (
 				EACD4CC71DCBA0C000431684 /* ViewController.swift in Sources */,
 				EACD4CC51DCBA0C000431684 /* AppDelegate.swift in Sources */,
+				EA76F29A1DCCC879000D5814 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA76F29C1DCCF4A4000D5814 /* UserTest.swift in Sources */,
 				EACD4CDA1DCBA0C000431684 /* ProjectRideTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +561,7 @@
 				EACD4CE01DCBA0C000431684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EACD4CE11DCBA0C000431684 /* Build configuration list for PBXNativeTarget "ProjectRideTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +570,7 @@
 				EACD4CE31DCBA0C000431684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
