@@ -7,7 +7,7 @@ script:
   - swift -version
   - xcodebuild -version
   - xcodebuild -showsdks
-  - swiftlint
+  #- swiftlint
   - sleep 5
   - set -o pipefail
   - xcodebuild clean test -project ProjectRide.xcproject -scheme ProjectRide -destination "platform=iOS Simulator,name=iPhone 7 Plus"
