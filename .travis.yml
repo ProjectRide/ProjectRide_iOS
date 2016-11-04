@@ -10,5 +10,5 @@ script:
   #- swiftlint
   - sleep 5
   - set -o pipefail
-  - xcodebuild clean test -project ProjectRide.xcproj -scheme ProjectRide -destination "platform=iOS Simulator,name=iPhone 7 Plus"
+  - xcodebuild clean test -project ProjectRide.xcodeproj -scheme ProjectRide -destination "platform=iOS Simulator,name=iPhone 7 Plus"
 
