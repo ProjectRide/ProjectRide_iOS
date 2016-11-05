@@ -12,7 +12,7 @@ import RealmSwift
 import JSONJoy
 
 class User: Object, JSONJoy {
-    
+
     static let idKeyName = "id"
     static let firstNameKeyName = "firstName"
     static let lastNameKeyName = "lastName"
@@ -23,7 +23,7 @@ class User: Object, JSONJoy {
     static let birthdateKeyName = "birthdate"
     static let memberSinceKeyName = "memberSince"
     static let imageKeyName = "image"
-    
+
     dynamic var id = ""
     dynamic var firstName = ""
     dynamic var lastName = ""
@@ -34,7 +34,7 @@ class User: Object, JSONJoy {
     dynamic var birthdate: Date? = nil
     dynamic var memberSince: Date? = nil
     dynamic var image: NSData? = nil
-    
+
     var sex: Sex {
         get {
             guard let sex = Sex(rawValue: self.sexString) else {
@@ -43,9 +43,9 @@ class User: Object, JSONJoy {
             return sex
         }
     }
-    
+    // swiftlint:disable function_parameter_count
     init(id: String, firstName: String, lastName: String, email: String, phoneNumber: String, aboutMe: String, sexString: String, birthdate: Date?, memberSince: Date?, image: NSData?) throws {
-        
+
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
@@ -61,19 +61,19 @@ class User: Object, JSONJoy {
         self.image = image
         super.init()
     }
-    
+
     required init(realm: RLMRealm, schema: RLMObjectSchema) {
         super.init(realm: realm, schema: schema)
     }
-    
+
     required init() {
         super.init()
     }
-    
+
     required init(value: Any, schema: RLMSchema) {
         super.init(value: value, schema: schema)
     }
-    
+
     required init(_ decoder: JSONDecoder) throws {
         self.id = try decoder[User.idKeyName].getString()
         self.firstName = try decoder[User.firstNameKeyName].getString()
@@ -85,7 +85,7 @@ class User: Object, JSONJoy {
         guard let _ = Sex(rawValue: sexString) else {
             throw UnknownSexError(description: "Unknown Sex")
         }
-        
+
         // TODO: String to date
         self.birthdate = nil
         self.memberSince = nil
@@ -93,7 +93,7 @@ class User: Object, JSONJoy {
         self.image = nil
         super.init()
     }
-    
+
 }
 
 enum Sex: String {
@@ -103,12 +103,11 @@ enum Sex: String {
 }
 
 class UnknownSexError: Error {
-    
+
     var localizedDescription: String = ""
-    
+
     init(description: String) {
         self.localizedDescription = description
     }
-    
-}
 
+}
