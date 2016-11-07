@@ -13,6 +13,7 @@ import JSONJoy
 
 class CarTest: XCTestCase {
 
+    let id = "1234"
     let make = "Mercedes"
     let model = "E-Klasse"
     let color = "Green"
@@ -20,7 +21,7 @@ class CarTest: XCTestCase {
 
 
     func getCorrectCarWithManualData() -> Car {
-        let car = Car(make: self.make, model: self.model, color: self.color, userId: self.userId)
+        let car = Car(id: self.id, make: self.make, model: self.model, color: self.color, userId: self.userId)
         return car
     }
 
@@ -31,25 +32,19 @@ class CarTest: XCTestCase {
     }
 
     func testConstructWithCorrectJSONData() {
-        let jsonData = "{\"\(Car.makeKeyName)\": \"\(make)\", \"\(Car.modelKeyName)\":\"\(model)\", \"\(Car.colorKeyName)\":\"\(color)\", \"\(Car.userIdKeyName)\":\"\(userId)\"}".data(using: .utf8)
+        let jsonData = "{\"\(Car.idKeyName)\": \"\(id)\", \"\(Car.makeKeyName)\": \"\(make)\", \"\(Car.modelKeyName)\":\"\(model)\", \"\(Car.colorKeyName)\":\"\(color)\", \"\(Car.userIdKeyName)\":\"\(userId)\"}".data(using: .utf8)
 
         do {
             let car = try Car(JSONDecoder(jsonData))
             XCTAssertTrue(car.make == make && car.model == model && car.color == color && car.userId == userId)
         } catch {
-            XCTAssertTrue(false)
+            XCTFail()
         }
     }
 
     func testConstructWithCorruptJSONData() {
         let jsonData = "{\"SomeWrongKey\": \"\(make)\", \"\(Car.modelKeyName)\":\"\(model)\", \"\(Car.colorKeyName)\":\"\(color)\", \"\(Car.userIdKeyName)\":\"\(userId)\"}".data(using: .utf8)
-        do {
-            _ = try Car(JSONDecoder(jsonData))
-            XCTAssertTrue(false)
-        } catch {
-            XCTAssertTrue(true)
-        }
-
+        XCTAssertThrowsError(try Car(JSONDecoder(jsonData)))
     }
 
     func testGetEntityName() {

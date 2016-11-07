@@ -17,7 +17,6 @@ class User: Object, JSONJoy, Entity {
         return "User"
     }
 
-
     static let idKeyName = "id"
     static let firstNameKeyName = "firstName"
     static let lastNameKeyName = "lastName"

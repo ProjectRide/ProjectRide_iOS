@@ -12,6 +12,10 @@
 		EA5781071DD0D330003170B3 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5781061DD0D330003170B3 /* Entity.swift */; };
 		EA5781091DD0D376003170B3 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5781081DD0D376003170B3 /* Car.swift */; };
 		EA57810B1DD0D3AB003170B3 /* CarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57810A1DD0D3AB003170B3 /* CarTests.swift */; };
+		EA57810D1DD11C9F003170B3 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57810C1DD11C9F003170B3 /* Ride.swift */; };
+		EA5781101DD12103003170B3 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57810F1DD12103003170B3 /* DateExtensions.swift */; };
+		EA5781121DD1230E003170B3 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5781111DD1230E003170B3 /* DateExtensionTests.swift */; };
+		EA5781141DD12736003170B3 /* RideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5781131DD12736003170B3 /* RideTests.swift */; };
 		EA76F29A1DCCC879000D5814 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA76F2991DCCC879000D5814 /* User.swift */; };
 		EA76F29C1DCCF4A4000D5814 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA76F29B1DCCF4A4000D5814 /* UserTest.swift */; };
 		EACD4CC51DCBA0C000431684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD4CC41DCBA0C000431684 /* AppDelegate.swift */; };
@@ -41,6 +45,10 @@
 		EA5781061DD0D330003170B3 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		EA5781081DD0D376003170B3 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		EA57810A1DD0D3AB003170B3 /* CarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarTests.swift; sourceTree = "<group>"; };
+		EA57810C1DD11C9F003170B3 /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		EA57810F1DD12103003170B3 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		EA5781111DD1230E003170B3 /* DateExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
+		EA5781131DD12736003170B3 /* RideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideTests.swift; sourceTree = "<group>"; };
 		EA76F2991DCCC879000D5814 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EA76F29B1DCCF4A4000D5814 /* UserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTest.swift; sourceTree = "<group>"; };
 		EACD4CC11DCBA0C000431684 /* ProjectRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,12 +104,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EA57810E1DD120F1003170B3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA57810F1DD12103003170B3 /* DateExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		EA76F2981DCCC86F000D5814 /* Api */ = {
 			isa = PBXGroup;
 			children = (
 				EA5781061DD0D330003170B3 /* Entity.swift */,
 				EA76F2991DCCC879000D5814 /* User.swift */,
 				EA5781081DD0D376003170B3 /* Car.swift */,
+				EA57810C1DD11C9F003170B3 /* Ride.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -129,6 +146,7 @@
 		EACD4CC31DCBA0C000431684 /* ProjectRide */ = {
 			isa = PBXGroup;
 			children = (
+				EA57810E1DD120F1003170B3 /* Extensions */,
 				EA76F2981DCCC86F000D5814 /* Api */,
 				EACD4CC41DCBA0C000431684 /* AppDelegate.swift */,
 				EACD4CC61DCBA0C000431684 /* ViewController.swift */,
@@ -146,6 +164,8 @@
 				EACD4CD91DCBA0C000431684 /* ProjectRideTests.swift */,
 				EA76F29B1DCCF4A4000D5814 /* UserTest.swift */,
 				EA57810A1DD0D3AB003170B3 /* CarTests.swift */,
+				EA5781111DD1230E003170B3 /* DateExtensionTests.swift */,
+				EA5781131DD12736003170B3 /* RideTests.swift */,
 				EACD4CDB1DCBA0C000431684 /* Info.plist */,
 			);
 			path = ProjectRideTests;
@@ -370,11 +390,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5781101DD12103003170B3 /* DateExtensions.swift in Sources */,
 				EA5781071DD0D330003170B3 /* Entity.swift in Sources */,
 				EACD4CC71DCBA0C000431684 /* ViewController.swift in Sources */,
 				EA5781091DD0D376003170B3 /* Car.swift in Sources */,
 				EACD4CC51DCBA0C000431684 /* AppDelegate.swift in Sources */,
 				EA76F29A1DCCC879000D5814 /* User.swift in Sources */,
+				EA57810D1DD11C9F003170B3 /* Ride.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +404,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5781141DD12736003170B3 /* RideTests.swift in Sources */,
 				EA57810B1DD0D3AB003170B3 /* CarTests.swift in Sources */,
+				EA5781121DD1230E003170B3 /* DateExtensionTests.swift in Sources */,
 				EA76F29C1DCCF4A4000D5814 /* UserTest.swift in Sources */,
 				EACD4CDA1DCBA0C000431684 /* ProjectRideTests.swift in Sources */,
 			);

@@ -38,17 +38,12 @@ class UserTest: XCTestCase {
 
             XCTAssertTrue(user.id == UserTest.ID && user.firstName == UserTest.firstName && user.lastName == UserTest.lastName && user.sexString == UserTest.sex && user.email == UserTest.email && user.phoneNumber == UserTest.phone && user.aboutMe == UserTest.aboutMe)
         } catch {
-            XCTAssertTrue(false)
+            XCTFail()
         }
     }
 
     func testUnknownSexWithManualData() {
-        do {
-            _ = try User(id: UserTest.ID, firstName: UserTest.firstName, lastName: UserTest.lastName, email: UserTest.email, phoneNumber: UserTest.phone, aboutMe: UserTest.aboutMe, sexString: UserTest.unknownSex, birthdate: nil, memberSince: nil, image: nil)
-            XCTAssertTrue(false)
-        } catch {
-            XCTAssertTrue(error as? UnknownSexError != nil)
-        }
+        XCTAssertThrowsError(try User(id: UserTest.ID, firstName: UserTest.firstName, lastName: UserTest.lastName, email: UserTest.email, phoneNumber: UserTest.phone, aboutMe: UserTest.aboutMe, sexString: UserTest.unknownSex, birthdate: nil, memberSince: nil, image: nil))
     }
 
     func testUserWithJSONSuccess() {
@@ -59,30 +54,18 @@ class UserTest: XCTestCase {
 
             XCTAssertTrue(user.id == UserTest.ID && user.firstName == UserTest.firstName && user.lastName == UserTest.lastName && user.sexString == UserTest.sex && user.email == UserTest.email && user.phoneNumber == UserTest.phone && user.aboutMe == UserTest.aboutMe)
         } catch {
-            XCTAssertTrue(false)
+            XCTFail()
         }
     }
 
     func testUnknownSexWithJSONData() {
-
         let userJSON = "{ \"\(User.idKeyName)\": \"\(UserTest.ID)\", \"\(User.firstNameKeyName)\": \"\(UserTest.firstName)\", \"\(User.lastNameKeyName)\": \"\(UserTest.lastName)\", \"\(User.sexKeyName)\": \"\(UserTest.unknownSex)\", \"\(User.emailKeyName)\": \"\(UserTest.email)\", \"\(User.phoneNumberKeyName)\": \"\(UserTest.phone)\", \"\(User.aboutMeKeyName)\": \"\(UserTest.aboutMe)\" }".data(using: .utf8)!
-        do {
-            _ = try User(JSONDecoder(userJSON))
-            XCTAssertTrue(false)
-        } catch {
-            XCTAssertTrue(error as? UnknownSexError != nil)
-        }
+        XCTAssertThrowsError(try User(JSONDecoder(userJSON)))
     }
 
     func testUserWithJSONFailure() {
         let userJSON = "{ \"WrongArgumentName\": \"\(UserTest.ID)\", \"\(User.firstNameKeyName)\": \"\(UserTest.firstName)\", \"\(User.lastNameKeyName)\": \"\(UserTest.lastName)\", \"\(User.sexKeyName)\": \"\(UserTest.sex)\", \"\(User.emailKeyName)\": \"\(UserTest.email)\", \"\(User.phoneNumberKeyName)\": \"\(UserTest.phone)\", \"\(User.aboutMeKeyName)\": \"\(UserTest.aboutMe)\" }".data(using: .utf8)!
-
-        do {
-            let _ = try User(JSONDecoder(userJSON))
-            XCTAssertTrue(false)
-        } catch {
-            XCTAssertTrue(true)
-        }
+        XCTAssertThrowsError(try User(JSONDecoder(userJSON)))
     }
 
     func testGetMaleSex() {
@@ -91,7 +74,7 @@ class UserTest: XCTestCase {
             let sex = user.sex
             XCTAssertTrue(sex == Sex.male)
         } catch {
-            XCTAssertTrue(false)
+            XCTFail()
         }
     }
 
@@ -102,7 +85,7 @@ class UserTest: XCTestCase {
             let sex = user.sex
             XCTAssertTrue(sex == Sex.female)
         } catch {
-            XCTAssertTrue(false)
+            XCTFail()
         }
 
     }
@@ -114,7 +97,7 @@ class UserTest: XCTestCase {
             let sex = user.sex
             XCTAssertTrue(sex == Sex.other)
         } catch {
-            XCTAssertTrue(false)
+            XCTFail()
         }
 
     }
@@ -124,7 +107,7 @@ class UserTest: XCTestCase {
             let user = try self.createBaseUser()
             XCTAssertTrue(user.entityName == "User")
         } catch {
-            XCTAssertTrue(false)
+            XCTFail()
         }
     }
 
