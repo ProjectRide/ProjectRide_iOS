@@ -22,18 +22,6 @@ class UserTest: XCTestCase {
     static let sex = "M"
     static let unknownSex = "C"
 
-
-
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-
     func createBaseUser() throws -> User {
         let user = try User(id: UserTest.ID, firstName: UserTest.firstName, lastName: UserTest.lastName, email: UserTest.email, phoneNumber: UserTest.phone, aboutMe: UserTest.aboutMe, sexString: UserTest.sex, birthdate: nil, memberSince: nil, image: nil)
         return user
@@ -129,6 +117,15 @@ class UserTest: XCTestCase {
             XCTAssertTrue(false)
         }
 
+    }
+
+    func testGetEntityName() {
+        do {
+            let user = try self.createBaseUser()
+            XCTAssertTrue(user.entityName == "User")
+        } catch {
+            XCTAssertTrue(false)
+        }
     }
 
 }

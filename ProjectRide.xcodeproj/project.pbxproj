@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8181228805CCC31985858F16 /* Pods_ProjectRide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87F2E4251E61CAEBB240A79 /* Pods_ProjectRide.framework */; };
 		84876CC6EB6B934102B47F8C /* Pods_ProjectRideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF7A3B649AEFD2825C631C6 /* Pods_ProjectRideTests.framework */; };
+		EA5781071DD0D330003170B3 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5781061DD0D330003170B3 /* Entity.swift */; };
+		EA5781091DD0D376003170B3 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5781081DD0D376003170B3 /* Car.swift */; };
+		EA57810B1DD0D3AB003170B3 /* CarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57810A1DD0D3AB003170B3 /* CarTests.swift */; };
 		EA76F29A1DCCC879000D5814 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA76F2991DCCC879000D5814 /* User.swift */; };
 		EA76F29C1DCCF4A4000D5814 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA76F29B1DCCF4A4000D5814 /* UserTest.swift */; };
 		EACD4CC51DCBA0C000431684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD4CC41DCBA0C000431684 /* AppDelegate.swift */; };
@@ -35,6 +38,9 @@
 		C0685A764ACBB2D1DD5150F5 /* Pods-ProjectRideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectRideTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectRideTests/Pods-ProjectRideTests.release.xcconfig"; sourceTree = "<group>"; };
 		C69173FA6CD369A6E24F77D2 /* Pods-ProjectRideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectRideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectRideTests/Pods-ProjectRideTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E87F2E4251E61CAEBB240A79 /* Pods_ProjectRide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectRide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA5781061DD0D330003170B3 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		EA5781081DD0D376003170B3 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		EA57810A1DD0D3AB003170B3 /* CarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarTests.swift; sourceTree = "<group>"; };
 		EA76F2991DCCC879000D5814 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EA76F29B1DCCF4A4000D5814 /* UserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTest.swift; sourceTree = "<group>"; };
 		EACD4CC11DCBA0C000431684 /* ProjectRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +99,9 @@
 		EA76F2981DCCC86F000D5814 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				EA5781061DD0D330003170B3 /* Entity.swift */,
 				EA76F2991DCCC879000D5814 /* User.swift */,
+				EA5781081DD0D376003170B3 /* Car.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -137,6 +145,7 @@
 			children = (
 				EACD4CD91DCBA0C000431684 /* ProjectRideTests.swift */,
 				EA76F29B1DCCF4A4000D5814 /* UserTest.swift */,
+				EA57810A1DD0D3AB003170B3 /* CarTests.swift */,
 				EACD4CDB1DCBA0C000431684 /* Info.plist */,
 			);
 			path = ProjectRideTests;
@@ -361,7 +370,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5781071DD0D330003170B3 /* Entity.swift in Sources */,
 				EACD4CC71DCBA0C000431684 /* ViewController.swift in Sources */,
+				EA5781091DD0D376003170B3 /* Car.swift in Sources */,
 				EACD4CC51DCBA0C000431684 /* AppDelegate.swift in Sources */,
 				EA76F29A1DCCC879000D5814 /* User.swift in Sources */,
 			);
@@ -371,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA57810B1DD0D3AB003170B3 /* CarTests.swift in Sources */,
 				EA76F29C1DCCF4A4000D5814 /* UserTest.swift in Sources */,
 				EACD4CDA1DCBA0C000431684 /* ProjectRideTests.swift in Sources */,
 			);
@@ -424,6 +436,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -473,6 +486,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -501,6 +515,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D4AD32B2AEDA5D827EEE471 /* Pods-ProjectRide.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 54EZ7X28X3;
 				INFOPLIST_FILE = ProjectRide/Info.plist;
@@ -515,6 +530,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AF56DCE8A2DF8B2445137836 /* Pods-ProjectRide.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 54EZ7X28X3;
 				INFOPLIST_FILE = ProjectRide/Info.plist;

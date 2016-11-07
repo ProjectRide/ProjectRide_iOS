@@ -1,0 +1,8 @@
+coverage_service: coveralls
+workspace: ./ProjectRide.xcworkspace
+xcodeproj: ./ProjectRide.xcodeproj
+scheme: ProjectRide
+source_directory: ./
+output_directory: ./
+ignore:
+  - Pods/*

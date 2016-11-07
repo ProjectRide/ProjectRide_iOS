@@ -11,7 +11,12 @@ import Realm
 import RealmSwift
 import JSONJoy
 
-class User: Object, JSONJoy {
+class User: Object, JSONJoy, Entity {
+
+    var entityName: String {
+        return "User"
+    }
+
 
     static let idKeyName = "id"
     static let firstNameKeyName = "firstName"

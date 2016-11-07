@@ -8,6 +8,9 @@ cache:
 before_install:
   - pod repo update # need to do a repo update as the newest pods won't be available otherwise
 
+install:
+  - gem install slather --user-install  
+
 script:
   - swift -version
   - xcodebuild -version
@@ -16,6 +19,9 @@ script:
   - sleep 5
   - set -o pipefail
   - xcodebuild clean test -workspace ProjectRide.xcworkspace -scheme ProjectRide -destination "platform=iOS Simulator,name=iPhone 7 Plus"
+
+after_success:
+  - slather
 
 notifications:
   slack:
