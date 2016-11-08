@@ -11,6 +11,8 @@
 		84876CC6EB6B934102B47F8C /* Pods_ProjectRideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF7A3B649AEFD2825C631C6 /* Pods_ProjectRideTests.framework */; };
 		EA3A38DA1DD21027005061C1 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A38D91DD21027005061C1 /* Place.swift */; };
 		EA3A38DC1DD213CB005061C1 /* PlaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A38DB1DD213CB005061C1 /* PlaceTests.swift */; };
+		EA3A38DE1DD21F67005061C1 /* PlaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A38DD1DD21F67005061C1 /* PlaceFactory.swift */; };
+		EA3A38E01DD226D5005061C1 /* PlaceFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A38DF1DD226D5005061C1 /* PlaceFactoryTests.swift */; };
 		EA5781071DD0D330003170B3 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5781061DD0D330003170B3 /* Entity.swift */; };
 		EA5781091DD0D376003170B3 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5781081DD0D376003170B3 /* Car.swift */; };
 		EA57810B1DD0D3AB003170B3 /* CarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57810A1DD0D3AB003170B3 /* CarTests.swift */; };
@@ -46,6 +48,8 @@
 		E87F2E4251E61CAEBB240A79 /* Pods_ProjectRide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectRide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3A38D91DD21027005061C1 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		EA3A38DB1DD213CB005061C1 /* PlaceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTests.swift; sourceTree = "<group>"; };
+		EA3A38DD1DD21F67005061C1 /* PlaceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceFactory.swift; sourceTree = "<group>"; };
+		EA3A38DF1DD226D5005061C1 /* PlaceFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceFactoryTests.swift; sourceTree = "<group>"; };
 		EA5781061DD0D330003170B3 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		EA5781081DD0D376003170B3 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		EA57810A1DD0D3AB003170B3 /* CarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarTests.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				EA5781081DD0D376003170B3 /* Car.swift */,
 				EA57810C1DD11C9F003170B3 /* Ride.swift */,
 				EA3A38D91DD21027005061C1 /* Place.swift */,
+				EA3A38DD1DD21F67005061C1 /* PlaceFactory.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 				EA5781111DD1230E003170B3 /* DateExtensionTests.swift */,
 				EA5781131DD12736003170B3 /* RideTests.swift */,
 				EA3A38DB1DD213CB005061C1 /* PlaceTests.swift */,
+				EA3A38DF1DD226D5005061C1 /* PlaceFactoryTests.swift */,
 				EACD4CDB1DCBA0C000431684 /* Info.plist */,
 			);
 			path = ProjectRideTests;
@@ -401,6 +407,7 @@
 				EACD4CC71DCBA0C000431684 /* ViewController.swift in Sources */,
 				EA3A38DA1DD21027005061C1 /* Place.swift in Sources */,
 				EA5781091DD0D376003170B3 /* Car.swift in Sources */,
+				EA3A38DE1DD21F67005061C1 /* PlaceFactory.swift in Sources */,
 				EACD4CC51DCBA0C000431684 /* AppDelegate.swift in Sources */,
 				EA76F29A1DCCC879000D5814 /* User.swift in Sources */,
 				EA57810D1DD11C9F003170B3 /* Ride.swift in Sources */,
@@ -413,6 +420,7 @@
 			files = (
 				EA5781141DD12736003170B3 /* RideTests.swift in Sources */,
 				EA3A38DC1DD213CB005061C1 /* PlaceTests.swift in Sources */,
+				EA3A38E01DD226D5005061C1 /* PlaceFactoryTests.swift in Sources */,
 				EA57810B1DD0D3AB003170B3 /* CarTests.swift in Sources */,
 				EA5781121DD1230E003170B3 /* DateExtensionTests.swift in Sources */,
 				EA76F29C1DCCF4A4000D5814 /* UserTest.swift in Sources */,

@@ -321,5 +321,117 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRide/PlaceFactory.swift"
+            timestampString = "500312473.617863"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "createPlaceWithCoordinate(coordinate:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRideTests/PlaceFactoryTests.swift"
+            timestampString = "500312995.715567"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "testCreateWithLocation()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectRideTests.PlaceFactoryTests.(testCreateWithLocation () -&gt; ()).(closure #1)"
+                  moduleName = "ProjectRideTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRideTests/PlaceFactoryTests.swift"
+                  timestampString = "500313239.113912"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectRideTests.PlaceFactoryTests.(testCreateWithLocation () -&gt; ()).(closure #1).(implicit closure #1)"
+                  moduleName = "ProjectRideTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRideTests/PlaceFactoryTests.swift"
+                  timestampString = "500313239.119613"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRide/PlaceFactory.swift"
+            timestampString = "500313093.450534"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "createPlaceWithCoordinate(coordinate:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ProjectRide.PlaceFactory.(createPlaceWithCoordinate (coordinate : __C.CLLocationCoordinate2D, completion : (Swift.Optional&lt;ProjectRide.Place&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "ProjectRide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRide/PlaceFactory.swift"
+                  timestampString = "500313238.327575"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ProjectRide.PlaceFactory.(createPlaceWithCoordinate (coordinate : __C.CLLocationCoordinate2D, completion : (Swift.Optional&lt;ProjectRide.Place&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "ProjectRide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRide/PlaceFactory.swift"
+                  timestampString = "500313238.331051"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "633">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
