@@ -1,4 +1,3 @@
-
 language: objective-c
 osx_image: xcode8
 
@@ -6,13 +5,10 @@ cache:
   - cocoapods # Caching Cocoa Pods to reduce build time
 
 before_install:
-  - pod repo update # need to do a repo update as the newest pods won't be available otherwise
+  - pod repo update >/dev/null # need to do a repo update as the newest pods won't be available otherwise
   - gem install slather
 
 script:
-  - swift -version
-  - xcodebuild -version
-  - xcodebuild -showsdks
   - swiftlint lint --config .swiftlint.yml
   - sleep 5
   - set -o pipefail
