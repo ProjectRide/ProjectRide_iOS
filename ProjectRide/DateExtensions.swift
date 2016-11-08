@@ -16,6 +16,7 @@ extension Date {
         }
         return Date(timeIntervalSince1970: timeIntervalFromString)
     }
+
 }
 
 class UnreadableDateStringError: Error {
