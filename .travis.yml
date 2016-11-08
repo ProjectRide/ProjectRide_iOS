@@ -11,6 +11,7 @@ before_install:
 script:
   - swiftlint lint --config .swiftlint.yml
   - sleep 5
+  - set -o pipefail
   - xcodebuild clean test -workspace ProjectRide.xcworkspace -scheme ProjectRide -destination "platform=iOS Simulator,name=iPhone 7 Plus"
 
 after_success:
