@@ -273,5 +273,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRideTests/PlaceTests.swift"
+            timestampString = "500307761.911701"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "testSetupWithManualData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectRideTests.PlaceTests.testSetupWithManualData () -&gt; ()"
+                  moduleName = "ProjectRideTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRideTests/PlaceTests.swift"
+                  timestampString = "500307773.806763"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectRideTests.PlaceTests.(testSetupWithManualData () -&gt; ()).(implicit closure #1)"
+                  moduleName = "ProjectRideTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRideTests/PlaceTests.swift"
+                  timestampString = "500307773.811336"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "51">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
