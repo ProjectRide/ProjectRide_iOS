@@ -39,12 +39,9 @@ class User: Object, JSONJoy, Entity {
     dynamic var memberSince: Date? = nil
     dynamic var image: NSData? = nil
 
-    var sex: Sex {
+    var sex: Sex? {
         get {
-            guard let sex = Sex(rawValue: self.sexString) else {
-                fatalError()
-            }
-            return sex
+            return Sex(rawValue: self.sexString)
         }
     }
     // swiftlint:disable function_parameter_count
@@ -58,7 +55,7 @@ class User: Object, JSONJoy, Entity {
         self.aboutMe = aboutMe
         self.sexString = sexString
         guard let _ = Sex(rawValue: self.sexString) else {
-            throw UnknownSexError(description: "Unknown Sex")
+            throw UnknownSexError(value: sexString)
         }
         self.birthdate = birthdate
         self.memberSince = memberSince
@@ -87,7 +84,7 @@ class User: Object, JSONJoy, Entity {
         self.aboutMe = try decoder[User.aboutMeKeyName].getString()
         self.sexString = try decoder[User.sexKeyName].getString()
         guard let _ = Sex(rawValue: sexString) else {
-            throw UnknownSexError(description: "Unknown Sex")
+            throw UnknownSexError(value: sexString)
         }
 
         // TODO: String to date
@@ -108,10 +105,16 @@ enum Sex: String {
 
 class UnknownSexError: Error {
 
-    var localizedDescription: String = ""
+    let value: String
 
-    init(description: String) {
-        self.localizedDescription = description
+    init(value: String) {
+        self.value = value
+    }
+
+    var localizedDescription: String {
+        get {
+            return "Unknown Sex for value: \(self.value)"
+        }
     }
 
 }
