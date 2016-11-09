@@ -7,7 +7,7 @@ target 'ProjectRide' do
 pod 'Realm'
 pod 'RealmSwift'
 pod 'Alamofire'
-pod 'JSONJoy-Swift'
+pod 'JSONJoy-Swift', '~> 2.0.1'
 
   # Pods for ProjectRide
 
