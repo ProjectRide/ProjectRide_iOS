@@ -38,9 +38,7 @@ class RideTests: XCTestCase {
 
     func testConstructWithCorrectJSONData() {
         let jsonString: String = "{\"\(Ride.idKeyName)\": \"\(id)\",\"\(Ride.driverIdKeyName)\": \"\(driverId)\",\"\(Ride.startDateKeyName)\":\"\(startDate.timeIntervalSince1970)\", \"\(Ride.endDateKeyName)\": \"\(endDate.timeIntervalSince1970)\", \"\(Ride.startPlaceIdKeyName)\": \"\(startPlaceId)\", \"\(Ride.endPlaceIdKeyName)\": \"\(endPlaceId)\", \"\(Ride.flexibleStartPlaceKeyName)\": \"\(flexibleStartPlace)\",\"\(Ride.flexibleEndPlaceKeyName)\": \"\(flexibleEndPlace)\", \"\(Ride.priceKeyName)\": \(price), \"\(Ride.numberOfSeatsKeyName)\": \(numberOfSeats), \"\(Ride.descriptionKeyName)\": \"\(descriptionText)\", \"\(Ride.seriesKeyName)\": \(series)}"
-
         do {
-            print(jsonString)
             let ride = try Ride(JSONDecoder(jsonString.data(using: .utf8)))
             XCTAssertTrue(ride.id == id && ride.driverId == driverId && ride.startDate == startDate && ride.endDate == endDate && ride.startPlaceId == startPlaceId && ride.endPlaceId == endPlaceId && ride.flexibleStartPlace == flexibleStartPlace && ride.flexibleEndPlace == flexibleEndPlace && ride.price == price && ride.numberOfSeats == numberOfSeats && ride.descriptionText == descriptionText && ride.series == series)
         } catch {

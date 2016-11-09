@@ -4,10 +4,10 @@
 target 'ProjectRide' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-pod 'Realm', '~> 2.0.3'
-pod 'RealmSwift', '~> 2.0.3'
-pod 'Alamofire', '~> 4.0.1'
-pod 'JSONJoy-Swift', '~> 2.0.1'
+pod 'Realm'
+pod 'RealmSwift'
+pod 'Alamofire'
+pod 'JSONJoy-Swift'
 
   # Pods for ProjectRide
 
