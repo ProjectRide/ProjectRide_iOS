@@ -34,7 +34,6 @@
 		EACD4CCA1DCBA0C000431684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACD4CC81DCBA0C000431684 /* Main.storyboard */; };
 		EACD4CCC1DCBA0C000431684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EACD4CCB1DCBA0C000431684 /* Assets.xcassets */; };
 		EACD4CCF1DCBA0C000431684 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACD4CCD1DCBA0C000431684 /* LaunchScreen.storyboard */; };
-		EACD4CDA1DCBA0C000431684 /* ProjectRideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD4CD91DCBA0C000431684 /* ProjectRideTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +80,6 @@
 		EACD4CCE1DCBA0C000431684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EACD4CD01DCBA0C000431684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EACD4CD51DCBA0C000431684 /* ProjectRideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectRideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EACD4CD91DCBA0C000431684 /* ProjectRideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRideTests.swift; sourceTree = "<group>"; };
 		EACD4CDB1DCBA0C000431684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBF7A3B649AEFD2825C631C6 /* Pods_ProjectRideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectRideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -197,7 +195,6 @@
 		EACD4CD81DCBA0C000431684 /* ProjectRideTests */ = {
 			isa = PBXGroup;
 			children = (
-				EACD4CD91DCBA0C000431684 /* ProjectRideTests.swift */,
 				EA76F29B1DCCF4A4000D5814 /* UserTest.swift */,
 				EA57810A1DD0D3AB003170B3 /* CarTests.swift */,
 				EA5781111DD1230E003170B3 /* DateExtensionTests.swift */,
@@ -460,7 +457,6 @@
 				EA3A38EB1DD32278005061C1 /* ApiConfigImplTests.swift in Sources */,
 				EA76F29C1DCCF4A4000D5814 /* UserTest.swift in Sources */,
 				EA3A38E71DD3215A005061C1 /* ApiTests.swift in Sources */,
-				EACD4CDA1DCBA0C000431684 /* ProjectRideTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
