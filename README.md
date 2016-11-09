@@ -1,3 +1,3 @@
-[![Build Status](https://travis-ci.org/ProjectRide/ProjectRide_iOS.svg?branch=develop)](https://travis-ci.org/ProjectRide/ProjectRide_iOS) [![Coverage Status](https://coveralls.io/repos/github/ProjectRide/ProjectRide_iOS/badge.svg?branch=develop)](https://coveralls.io/github/ProjectRide/ProjectRide_iOS?branch=develop) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/672421f74563444b84539d16a51a1dfc)](https://www.codacy.com/app/socceryps/ProjectRide_iOS?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ProjectRide/ProjectRide_iOS&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/ProjectRide/ProjectRide_iOS.svg?branch=develop)](https://travis-ci.org/ProjectRide/ProjectRide_iOS) [![Coverage Status](https://coveralls.io/repos/github/ProjectRide/ProjectRide_iOS/badge.svg?branch=develop)](https://coveralls.io/github/ProjectRide/ProjectRide_iOS?branch=develop)
 # ProjectRide_iOS
 
