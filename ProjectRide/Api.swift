@@ -23,12 +23,17 @@ extension Api {
         let url = self.urlForEntity(entity: entityName)
         Alamofire.request(url).response() { response in
             let fetchHandler = FetchResponseHandler(response: response.response, data: response.data, error: response.error)
-            let handledResponse = fetchHandler.handle()
-            completion(handledResponse.jsonDecoder, handledResponse.error)
+            do {
+                let jsonDecoder = try fetchHandler.handle()
+                completion(jsonDecoder, nil)
+            } catch {
+                completion(nil, error)
+            }
         }
     }
 
     private func urlForEntity(entity: String) -> String {
         return "\(self.apiConfig.baseURL)\(entity)"
     }
+
 }

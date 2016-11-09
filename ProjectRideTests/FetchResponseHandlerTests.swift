@@ -21,10 +21,10 @@ class FetchResponseHandlerTests: XCTestCase {
 
     func testSuccessfulFetch() {
         let handler = FetchResponseHandler(response: succesfullHttpResponse, data: jsonData, error: nil)
-        let handledFetch = handler.handle()
         do {
-            let valueToKey = try handledFetch.jsonDecoder?["Key"].getString()
-            XCTAssertTrue(valueToKey == "Value" && handledFetch.error == nil)
+            let jsonDecoder = try handler.handle()
+            let valueToKey = try jsonDecoder["Key"].getString()
+            XCTAssertTrue(valueToKey == "Value")
         } catch {
             XCTFail()
         }
@@ -32,26 +32,22 @@ class FetchResponseHandlerTests: XCTestCase {
 
     func testSuccessfulFetchWithoutData() {
         let handler = FetchResponseHandler(response: succesfullHttpResponse, data: nil, error: nil)
-        let handledFetch = handler.handle()
-        XCTAssertTrue(handledFetch.jsonDecoder == nil && handledFetch.error as? FetchError != nil)
+        XCTAssertThrowsError(try handler.handle())
     }
 
     func testFetchWithoutAnything() {
         let handler = FetchResponseHandler(response: nil, data: nil, error: nil)
-        let handledFetch = handler.handle()
-        XCTAssertTrue(handledFetch.jsonDecoder == nil && handledFetch.error as? FetchError != nil)
+        XCTAssertThrowsError(try handler.handle())
     }
 
     func testUnsuccessfulFetch() {
         let handler = FetchResponseHandler(response: unsuccesfullHttpResponse, data: jsonData, error: nil)
-        let handledFetch = handler.handle()
-        XCTAssertTrue(handledFetch.jsonDecoder == nil && handledFetch.error as? FetchError != nil)
+        XCTAssertThrowsError(try handler.handle())
     }
 
     func testErroredFetch() {
         let handler = FetchResponseHandler(response: nil, data: nil, error: FetchError())
-        let handledFetch = handler.handle()
-        XCTAssertTrue(handledFetch.jsonDecoder == nil && handledFetch.error != nil)
+        XCTAssertThrowsError(try handler.handle())
     }
 
 

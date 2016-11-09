@@ -440,11 +440,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProjectRide/Api.swift"
-            timestampString = "500380034.518596"
+            timestampString = "500384177.748888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "fetch(entityName:completion:)"
             landmarkType = "7">
          </BreakpointContent>

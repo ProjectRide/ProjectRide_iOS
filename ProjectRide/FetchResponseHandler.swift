@@ -22,18 +22,18 @@ class FetchResponseHandler {
         self.error = error
     }
 
-    func handle() -> (jsonDecoder: JSONDecoder?, error: Error?) {
+    func handle() throws -> JSONDecoder {
         if let error = self.error {
-            return (nil, error)
+            throw error
         }
         if self.isUnsuccessfulStatusCode(statusCode: self.response?.statusCode) {
-            return (nil, FetchError())
+            throw FetchError()
         }
         if let data = self.data {
             let responseString = String(data: data, encoding: .utf8)
-            return (JSONDecoder(responseString), nil)
+            return JSONDecoder(responseString)
         }
-        return (nil, FetchError())
+        throw FetchError()
     }
 
     private func isUnsuccessfulStatusCode(statusCode: Int?) -> Bool {
@@ -46,4 +46,4 @@ class FetchResponseHandler {
 
 }
 
-class FetchError: Error { }
+class FetchError: Error {}
