@@ -15,6 +15,7 @@ script:
   - xcodebuild clean test -workspace ProjectRide.xcworkspace -scheme ProjectRide -destination "platform=iOS Simulator,name=iPhone 7 Plus"
 
 after_success:
+  - sleep 5
   - slather
 
 notifications:
