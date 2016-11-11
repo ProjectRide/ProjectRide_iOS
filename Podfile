@@ -8,12 +8,19 @@ pod 'Realm'
 pod 'RealmSwift'
 pod 'Alamofire'
 pod 'JSONJoy-Swift', '~> 2.0.1'
+pod 'Starscream'
 
   # Pods for ProjectRide
 
   target 'ProjectRideTests' do
     inherit! :search_paths
     # Pods for testing
+
+pod 'Realm'
+pod 'RealmSwift'
+pod 'Alamofire'
+pod 'JSONJoy-Swift', '~> 2.0.1'
+
   end
 
 end
