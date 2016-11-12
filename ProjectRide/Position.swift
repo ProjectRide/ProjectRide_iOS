@@ -40,3 +40,11 @@ struct Position: WebsocketMessageSerializable {
     }
 
 }
+
+extension Position {
+
+    static func fromLocation(location: CLLocation) -> Position {
+        return Position(coordinate: location.coordinate, date: location.timestamp)
+    }
+
+}

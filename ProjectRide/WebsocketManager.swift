@@ -10,7 +10,7 @@ import Foundation
 import Starscream
 import JSONJoy
 
-class WebsocketManager: WebsocketConnection, WebSocketDelegate {
+class WebsocketManager: WebsocketConnection {
 
     private static var instance: WebsocketManager?
 
@@ -30,12 +30,10 @@ class WebsocketManager: WebsocketConnection, WebSocketDelegate {
 
     private init(config: WebsocketConfiguration) {
         self.connection = WebSocket(url: config.url)
-        self.connection.delegate = self
     }
 
     private init(websocketI: WebSocketI) {
         self.connection = websocketI
-        self.connection.delegate = self
     }
 
     // MARK: WebsocketConnection
@@ -55,20 +53,6 @@ class WebsocketManager: WebsocketConnection, WebSocketDelegate {
             return false
         }
     }
-
-    // MARK: WebSocketDelegate
-
-    func websocketDidConnect(socket: WebSocket) {
-        print("succesfully connected to WS: \(socket.currentURL)")
-    }
-
-    func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
-        print("disconnected from WS: \(socket.currentURL), error: \(error?.localizedDescription)")
-    }
-
-    func websocketDidReceiveMessage(socket: WebSocket, text: String) {}
-
-    func websocketDidReceiveData(socket: WebSocket, data: Data) {}
 
 }
 

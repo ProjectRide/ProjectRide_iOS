@@ -465,5 +465,371 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRide/WebsocketManager.swift"
+            timestampString = "500572121.210491"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "sharedInstance(websocketConnection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRideTests/WebsocketManagerTests.swift"
+            timestampString = "500637180.553301"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "MockMessage"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRideTests/WebsocketManagerTests.swift"
+            timestampString = "500637180.553301"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "testShouldNotSendMessage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectRideTests.WebsocketMockClass.init () -&gt; ProjectRideTests.WebsocketMockClass"
+                  moduleName = "ProjectRideTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRideTests/WebsocketManagerTests.swift"
+                  timestampString = "500578326.807345"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectRideTests.WebsocketMockClass.message.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "ProjectRideTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRideTests/WebsocketManagerTests.swift"
+                  timestampString = "500578326.809903"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectRideTests.WebsocketMockClass.message.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "ProjectRideTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRideTests/WebsocketManagerTests.swift"
+                  timestampString = "500578326.812717"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "150">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRide/WebsocketManager.swift"
+            timestampString = "500637156.008035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "send(message:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRide/WebsocketManager.swift"
+            timestampString = "500637156.008035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "messageContainsType(decodedMessage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRide/WebsocketManager.swift"
+            timestampString = "500637156.008035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "messageContainsType(decodedMessage:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectRide.WebsocketManager.(messageContainsType in _BD3E272DD6CEED7560E67F67D2B08766) (decodedMessage : JSONJoy.JSONDecoder) -&gt; Swift.Bool"
+                  moduleName = "ProjectRide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRide/WebsocketManager.swift"
+                  timestampString = "500578556.559854"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "221">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectRide.WebsocketManager.(messageContainsType in _BD3E272DD6CEED7560E67F67D2B08766) (decodedMessage : JSONJoy.JSONDecoder) -&gt; Swift.Bool"
+                  moduleName = "ProjectRide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRide/WebsocketManager.swift"
+                  timestampString = "500578556.562356"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "258">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRideTests/WebsocketManagerTests.swift"
+            timestampString = "500637180.553301"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "testShouldNotSendMessage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectRideTests.WebsocketMockClass.init () -&gt; ProjectRideTests.WebsocketMockClass"
+                  moduleName = "ProjectRideTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRideTests/WebsocketManagerTests.swift"
+                  timestampString = "500578330.380368"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectRideTests.WebsocketMockClass.message.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "ProjectRideTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRideTests/WebsocketManagerTests.swift"
+                  timestampString = "500578330.382907"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectRideTests.WebsocketMockClass.message.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "ProjectRideTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRideTests/WebsocketManagerTests.swift"
+                  timestampString = "500578330.385181"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "150">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRideTests/WebsocketManagerTests.swift"
+            timestampString = "500578555.448895"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "tearDown()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectRideTests.WebsocketManagerTests.testWebsocketManagerAsDelegate () -&gt; ()"
+                  moduleName = "ProjectRideTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRideTests/WebsocketManagerTests.swift"
+                  timestampString = "500578557.46148"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectRideTests.WebsocketManagerTests.(testWebsocketManagerAsDelegate () -&gt; ()).(implicit closure #1)"
+                  moduleName = "ProjectRideTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yannickwinter/WinterApps/iOS10/ProjectRide_iOS/ProjectRideTests/WebsocketManagerTests.swift"
+                  timestampString = "500578557.465544"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "33">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRideTests/LocationGathererTests.swift"
+            timestampString = "500635578.85387"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "testWithoutPermissions()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRide/LocationGatherer.swift"
+            timestampString = "500636717.741832"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "locationManager(_:didChangeAuthorization:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRideTests/LocationGathererTests.swift"
+            timestampString = "500636294.477317"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "testWithLaterGrantedPermissions()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRideTests/LocationGathererTests.swift"
+            timestampString = "500636406.927349"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "MockLocationManager"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectRide/LocationGatherer.swift"
+            timestampString = "500636799.203714"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "locationManager(_:didChangeAuthorization:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

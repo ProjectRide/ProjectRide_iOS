@@ -27,6 +27,8 @@
 		EA3A39751DD620EA005061C1 /* WebsocketConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A39741DD620EA005061C1 /* WebsocketConfig.swift */; };
 		EA3A39791DD62EA4005061C1 /* PositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A39781DD62EA4005061C1 /* PositionTests.swift */; };
 		EA3A397D1DD630B0005061C1 /* WebsocketManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A397C1DD630B0005061C1 /* WebsocketManagerTests.swift */; };
+		EA3A397F1DD63DC0005061C1 /* LocationGatherer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A397E1DD63DC0005061C1 /* LocationGatherer.swift */; };
+		EA3A39811DD64293005061C1 /* LocationGathererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A39801DD64293005061C1 /* LocationGathererTests.swift */; };
 		EA5781071DD0D330003170B3 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5781061DD0D330003170B3 /* Entity.swift */; };
 		EA5781091DD0D376003170B3 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5781081DD0D376003170B3 /* Car.swift */; };
 		EA57810B1DD0D3AB003170B3 /* CarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57810A1DD0D3AB003170B3 /* CarTests.swift */; };
@@ -77,6 +79,8 @@
 		EA3A39741DD620EA005061C1 /* WebsocketConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsocketConfig.swift; sourceTree = "<group>"; };
 		EA3A39781DD62EA4005061C1 /* PositionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionTests.swift; sourceTree = "<group>"; };
 		EA3A397C1DD630B0005061C1 /* WebsocketManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsocketManagerTests.swift; sourceTree = "<group>"; };
+		EA3A397E1DD63DC0005061C1 /* LocationGatherer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationGatherer.swift; sourceTree = "<group>"; };
+		EA3A39801DD64293005061C1 /* LocationGathererTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationGathererTests.swift; sourceTree = "<group>"; };
 		EA5781061DD0D330003170B3 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		EA5781081DD0D376003170B3 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		EA57810A1DD0D3AB003170B3 /* CarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarTests.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3A396B1DD6166D005061C1 /* LocationTracker.swift */,
+				EA3A397E1DD63DC0005061C1 /* LocationGatherer.swift */,
 				EA3A396F1DD6190C005061C1 /* Position.swift */,
 				EA3A39731DD620C0005061C1 /* Websocket */,
 			);
@@ -229,6 +234,7 @@
 		EACD4CD81DCBA0C000431684 /* ProjectRideTests */ = {
 			isa = PBXGroup;
 			children = (
+				EACD4CDB1DCBA0C000431684 /* Info.plist */,
 				EA76F29B1DCCF4A4000D5814 /* UserTest.swift */,
 				EA57810A1DD0D3AB003170B3 /* CarTests.swift */,
 				EA5781111DD1230E003170B3 /* DateExtensionTests.swift */,
@@ -241,7 +247,7 @@
 				EA3A396D1DD616F3005061C1 /* LocationTrackerTests.swift */,
 				EA3A39781DD62EA4005061C1 /* PositionTests.swift */,
 				EA3A397C1DD630B0005061C1 /* WebsocketManagerTests.swift */,
-				EACD4CDB1DCBA0C000431684 /* Info.plist */,
+				EA3A39801DD64293005061C1 /* LocationGathererTests.swift */,
 			);
 			path = ProjectRideTests;
 			sourceTree = "<group>";
@@ -481,6 +487,7 @@
 				EA3A38ED1DD325FA005061C1 /* FetchResponseHandler.swift in Sources */,
 				EA3A38E51DD22F32005061C1 /* ApiConfig.swift in Sources */,
 				EA3A38E31DD22EDF005061C1 /* Api.swift in Sources */,
+				EA3A397F1DD63DC0005061C1 /* LocationGatherer.swift in Sources */,
 				EA57810D1DD11C9F003170B3 /* Ride.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +504,7 @@
 				EA3A39791DD62EA4005061C1 /* PositionTests.swift in Sources */,
 				EA57810B1DD0D3AB003170B3 /* CarTests.swift in Sources */,
 				EA3A396E1DD616F3005061C1 /* LocationTrackerTests.swift in Sources */,
+				EA3A39811DD64293005061C1 /* LocationGathererTests.swift in Sources */,
 				EA5781121DD1230E003170B3 /* DateExtensionTests.swift in Sources */,
 				EA3A38EB1DD32278005061C1 /* ApiConfigImplTests.swift in Sources */,
 				EA76F29C1DCCF4A4000D5814 /* UserTest.swift in Sources */,

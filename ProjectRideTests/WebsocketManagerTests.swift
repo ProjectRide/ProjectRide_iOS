@@ -21,10 +21,6 @@ class WebsocketManagerTests: XCTestCase {
         WebsocketManagerTests.mockWS.message = nil
     }
 
-    func testWebsocketManagerAsDelegate() {
-        XCTAssertNotNil(WebsocketManagerTests.mockWS.delegate)
-    }
-
     func testSendMessage() {
         let mockMessage = MockMessage(addsType: true)
         manager.send(message: mockMessage)

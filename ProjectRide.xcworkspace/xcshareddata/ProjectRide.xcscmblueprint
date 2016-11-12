@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "11785872022121F4E2E198D85EBAE09F3E6B3EFA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "11785872022121F4E2E198D85EBAE09F3E6B3EFA" : 9223372036854775807,
+    "05739DDC11775AAEB69D4CC8381F0BE76BE7247D" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "07E8DDC9-BEC6-4C72-AFE8-58019CFCD703",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "11785872022121F4E2E198D85EBAE09F3E6B3EFA" : "ProjectRide_iOS\/",
+    "05739DDC11775AAEB69D4CC8381F0BE76BE7247D" : "..\/JSONJoy\/JSONJoy-Swift"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ProjectRide",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ProjectRide.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/daltoniam\/JSONJoy-Swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "05739DDC11775AAEB69D4CC8381F0BE76BE7247D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ProjectRide\/ProjectRide_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "11785872022121F4E2E198D85EBAE09F3E6B3EFA"
+    }
+  ]
+}
