@@ -21,18 +21,34 @@ class CarTest: XCTestCase {
 
 
     func getCorrectCarWithManualData() -> Car {
-        let car = Car(id: self.id, make: self.make, model: self.model, color: self.color, userId: self.userId)
+        let car = Car(
+            id: self.id,
+            make: self.make,
+            model: self.model,
+            color: self.color,
+            userId: self.userId
+        )
         return car
     }
 
     func testConstructWithCorrectManualData() {
         let car = self.getCorrectCarWithManualData()
 
-        XCTAssertTrue(car.make == make && car.model == model && car.color == color && car.userId == userId)
+        XCTAssertTrue(
+            car.make == make &&
+            car.model == model &&
+            car.color == color &&
+            car.userId == userId
+        )
     }
 
     func testConstructWithCorrectJSONData() {
-        let jsonData = "{\"\(Car.idKeyName)\": \"\(id)\", \"\(Car.makeKeyName)\": \"\(make)\", \"\(Car.modelKeyName)\":\"\(model)\", \"\(Car.colorKeyName)\":\"\(color)\", \"\(Car.userIdKeyName)\":\"\(userId)\"}".data(using: .utf8)
+        let jsonString = "{\"\(Car.idKeyName)\": \"\(id)\", " +
+            "\"\(Car.makeKeyName)\": \"\(make)\", " +
+            "\"\(Car.modelKeyName)\":\"\(model)\", " +
+            "\"\(Car.colorKeyName)\":\"\(color)\", " +
+            "\"\(Car.userIdKeyName)\":\"\(userId)\"}"
+        let jsonData = jsonString.data(using: .utf8)
 
         do {
             let car = try Car(JSONDecoder(jsonData))
@@ -43,7 +59,7 @@ class CarTest: XCTestCase {
     }
 
     func testConstructWithCorruptJSONData() {
-        let jsonData = "{\"SomeWrongKey\": \"\(make)\", \"\(Car.modelKeyName)\":\"\(model)\", \"\(Car.colorKeyName)\":\"\(color)\", \"\(Car.userIdKeyName)\":\"\(userId)\"}".data(using: .utf8)
+        let jsonData = "{\"SomeWrongKey\": \"\(make)\"}".data(using: .utf8)
         XCTAssertThrowsError(try Car(JSONDecoder(jsonData)))
     }
 

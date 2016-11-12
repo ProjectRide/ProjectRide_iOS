@@ -28,22 +28,48 @@ class UserTest: XCTestCase {
     }
 
     func createBasicJSONDecoder() -> JSONDecoder {
-        let userJSON = "{ \"\(User.idKeyName)\": \"\(UserTest.ID)\", \"\(User.firstNameKeyName)\": \"\(UserTest.firstName)\", \"\(User.lastNameKeyName)\": \"\(UserTest.lastName)\", \"\(User.sexKeyName)\": \"\(UserTest.sex)\", \"\(User.emailKeyName)\": \"\(UserTest.email)\", \"\(User.phoneNumberKeyName)\": \"\(UserTest.phone)\", \"\(User.aboutMeKeyName)\": \"\(UserTest.aboutMe)\" }".data(using: .utf8)!
+        let jsonString = "{ " +
+            "\"\(User.idKeyName)\": \"\(UserTest.ID)\", " +
+            "\"\(User.firstNameKeyName)\": \"\(UserTest.firstName)\", " +
+            "\"\(User.lastNameKeyName)\": \"\(UserTest.lastName)\", " +
+            "\"\(User.sexKeyName)\": \"\(UserTest.sex)\", " +
+            "\"\(User.emailKeyName)\": \"\(UserTest.email)\", " +
+            "\"\(User.phoneNumberKeyName)\": \"\(UserTest.phone)\", " +
+            "\"\(User.aboutMeKeyName)\": \"\(UserTest.aboutMe)\" " +
+            "}"
+        let userJSON = jsonString.data(using: .utf8)!
         return JSONDecoder(userJSON)
     }
 
     func testUserWithManualData() {
         do {
             let user = try self.createBaseUser()
-
-            XCTAssertTrue(user.id == UserTest.ID && user.firstName == UserTest.firstName && user.lastName == UserTest.lastName && user.sexString == UserTest.sex && user.email == UserTest.email && user.phoneNumber == UserTest.phone && user.aboutMe == UserTest.aboutMe)
+            XCTAssertTrue(
+                user.id == UserTest.ID &&
+                user.firstName == UserTest.firstName &&
+                user.lastName == UserTest.lastName &&
+                user.sexString == UserTest.sex &&
+                user.email == UserTest.email &&
+                user.phoneNumber == UserTest.phone &&
+                user.aboutMe == UserTest.aboutMe
+            )
         } catch {
             XCTFail()
         }
     }
 
     func testUnknownSexWithManualData() {
-        XCTAssertThrowsError(try User(id: UserTest.ID, firstName: UserTest.firstName, lastName: UserTest.lastName, email: UserTest.email, phoneNumber: UserTest.phone, aboutMe: UserTest.aboutMe, sexString: UserTest.unknownSex, birthdate: nil, memberSince: nil, image: nil))
+        XCTAssertThrowsError(try User(id: UserTest.ID,
+                            firstName: UserTest.firstName,
+                            lastName: UserTest.lastName,
+                            email: UserTest.email,
+                            phoneNumber: UserTest.phone,
+                            aboutMe: UserTest.aboutMe,
+                            sexString: UserTest.unknownSex,
+                            birthdate: nil,
+                            memberSince: nil,
+                            image: nil)
+        )
     }
 
     func testUserWithJSONSuccess() {
@@ -52,19 +78,36 @@ class UserTest: XCTestCase {
         do {
             let user = try User(decoder)
 
-            XCTAssertTrue(user.id == UserTest.ID && user.firstName == UserTest.firstName && user.lastName == UserTest.lastName && user.sexString == UserTest.sex && user.email == UserTest.email && user.phoneNumber == UserTest.phone && user.aboutMe == UserTest.aboutMe)
+            XCTAssertTrue(
+                user.id == UserTest.ID &&
+                    user.firstName == UserTest.firstName &&
+                    user.lastName == UserTest.lastName &&
+                    user.sexString == UserTest.sex &&
+                    user.email == UserTest.email &&
+                    user.phoneNumber == UserTest.phone &&
+                    user.aboutMe == UserTest.aboutMe
+            )
         } catch {
             XCTFail()
         }
     }
 
     func testUnknownSexWithJSONData() {
-        let userJSON = "{ \"\(User.idKeyName)\": \"\(UserTest.ID)\", \"\(User.firstNameKeyName)\": \"\(UserTest.firstName)\", \"\(User.lastNameKeyName)\": \"\(UserTest.lastName)\", \"\(User.sexKeyName)\": \"\(UserTest.unknownSex)\", \"\(User.emailKeyName)\": \"\(UserTest.email)\", \"\(User.phoneNumberKeyName)\": \"\(UserTest.phone)\", \"\(User.aboutMeKeyName)\": \"\(UserTest.aboutMe)\" }".data(using: .utf8)!
+        let jsonString = "{ " +
+            "\"\(User.idKeyName)\": \"\(UserTest.ID)\", " +
+            "\"\(User.firstNameKeyName)\": \"\(UserTest.firstName)\", " +
+            "\"\(User.lastNameKeyName)\": \"\(UserTest.lastName)\", " +
+            "\"\(User.sexKeyName)\": \"\(UserTest.unknownSex)\", " +
+            "\"\(User.emailKeyName)\": \"\(UserTest.email)\", " +
+            "\"\(User.phoneNumberKeyName)\": \"\(UserTest.phone)\", " +
+            "\"\(User.aboutMeKeyName)\": \"\(UserTest.aboutMe)\" " +
+        "}"
+        let userJSON = jsonString.data(using: .utf8)!
         XCTAssertThrowsError(try User(JSONDecoder(userJSON)))
     }
 
     func testUserWithJSONFailure() {
-        let userJSON = "{ \"WrongArgumentName\": \"\(UserTest.ID)\", \"\(User.firstNameKeyName)\": \"\(UserTest.firstName)\", \"\(User.lastNameKeyName)\": \"\(UserTest.lastName)\", \"\(User.sexKeyName)\": \"\(UserTest.sex)\", \"\(User.emailKeyName)\": \"\(UserTest.email)\", \"\(User.phoneNumberKeyName)\": \"\(UserTest.phone)\", \"\(User.aboutMeKeyName)\": \"\(UserTest.aboutMe)\" }".data(using: .utf8)!
+        let userJSON = "{ \"WrongArgumentName\": \"\(UserTest.ID)\"}".data(using: .utf8)!
         XCTAssertThrowsError(try User(JSONDecoder(userJSON)))
     }
 

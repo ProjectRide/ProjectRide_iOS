@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProjectRideTests/RideTests.swift"
-            timestampString = "500246549.385669"
+            timestampString = "500637717.858776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "getCorrectRideWithManualData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProjectRideTests/RideTests.swift"
-            timestampString = "500248094.434657"
+            timestampString = "500637717.858776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "testConstructWithCorrectJSONData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -248,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProjectRideTests/RideTests.swift"
-            timestampString = "500378795.897285"
+            timestampString = "500637717.858776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "testConstructWithCorrectJSONData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProjectRideTests/RideTests.swift"
-            timestampString = "500378795.897285"
+            timestampString = "500637717.858776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "testConstructWithCorrectJSONData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -280,11 +280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProjectRideTests/PlaceTests.swift"
-            timestampString = "500307761.911701"
+            timestampString = "500638261.933298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "testSetupWithManualData()"
             landmarkType = "7">
             <Locations>

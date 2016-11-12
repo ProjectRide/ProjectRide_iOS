@@ -27,20 +27,71 @@ class RideTests: XCTestCase {
     let series: Bool = false
 
     func getCorrectRideWithManualData() -> Ride {
-        let ride = Ride(id: self.id, driverId: self.driverId, startDate: self.startDate, endDate: self.endDate, startPlaceId: self.startPlaceId, endPlaceId: self.endPlaceId, flexibleStartPlace: self.flexibleStartPlace, flexibleEndPlace: self.flexibleEndPlace, price: self.price, numberOfSeats: self.numberOfSeats, descriptionText: self.descriptionText, series: self.series)
+        let ride = Ride(id: self.id,
+                        driverId: self.driverId,
+                        startDate: self.startDate,
+                        endDate: self.endDate,
+                        startPlaceId: self.startPlaceId,
+                        endPlaceId: self.endPlaceId,
+                        flexibleStartPlace: self.flexibleStartPlace,
+                        flexibleEndPlace: self.flexibleEndPlace,
+                        price: self.price,
+                        numberOfSeats: self.numberOfSeats,
+                        descriptionText: self.descriptionText,
+                        series: self.series
+        )
         return ride
     }
 
     func testConstructWithCorrectManualData() {
         let ride = self.getCorrectRideWithManualData()
-        XCTAssertTrue(ride.id == id && ride.driverId == driverId && ride.startDate == startDate && ride.endDate == endDate && ride.startPlaceId == startPlaceId && ride.endPlaceId == endPlaceId && ride.flexibleStartPlace == flexibleStartPlace && ride.flexibleEndPlace == flexibleEndPlace && ride.price == price && ride.numberOfSeats == numberOfSeats && ride.descriptionText == descriptionText && ride.series == series)
+        XCTAssertTrue(
+                ride.id == id &&
+                ride.driverId == driverId &&
+                ride.startDate == startDate &&
+                ride.endDate == endDate &&
+                ride.startPlaceId == startPlaceId &&
+                ride.endPlaceId == endPlaceId &&
+                ride.flexibleStartPlace == flexibleStartPlace &&
+                ride.flexibleEndPlace == flexibleEndPlace &&
+                ride.price == price &&
+                ride.numberOfSeats == numberOfSeats &&
+                ride.descriptionText == descriptionText &&
+                ride.series == series
+        )
     }
 
     func testConstructWithCorrectJSONData() {
-        let jsonString: String = "{\"\(Ride.idKeyName)\": \"\(id)\",\"\(Ride.driverIdKeyName)\": \"\(driverId)\",\"\(Ride.startDateKeyName)\":\"\(startDate.timeIntervalSince1970)\", \"\(Ride.endDateKeyName)\": \"\(endDate.timeIntervalSince1970)\", \"\(Ride.startPlaceIdKeyName)\": \"\(startPlaceId)\", \"\(Ride.endPlaceIdKeyName)\": \"\(endPlaceId)\", \"\(Ride.flexibleStartPlaceKeyName)\": \"\(flexibleStartPlace)\",\"\(Ride.flexibleEndPlaceKeyName)\": \"\(flexibleEndPlace)\", \"\(Ride.priceKeyName)\": \(price), \"\(Ride.numberOfSeatsKeyName)\": \(numberOfSeats), \"\(Ride.descriptionKeyName)\": \"\(descriptionText)\", \"\(Ride.seriesKeyName)\": \(series)}"
+        let jsonString: String = "{" +
+            "\"\(Ride.idKeyName)\": \"\(id)\"," +
+            "\"\(Ride.driverIdKeyName)\": \"\(driverId)\"," +
+            "\"\(Ride.startDateKeyName)\":\"\(startDate.timeIntervalSince1970)\", " +
+            "\"\(Ride.endDateKeyName)\": \"\(endDate.timeIntervalSince1970)\", " +
+            "\"\(Ride.startPlaceIdKeyName)\": \"\(startPlaceId)\", " +
+            "\"\(Ride.endPlaceIdKeyName)\": \"\(endPlaceId)\", " +
+            "\"\(Ride.flexibleStartPlaceKeyName)\": \"\(flexibleStartPlace)\"," +
+            "\"\(Ride.flexibleEndPlaceKeyName)\": \"\(flexibleEndPlace)\", " +
+            "\"\(Ride.priceKeyName)\": \(price), " +
+            "\"\(Ride.numberOfSeatsKeyName)\": \(numberOfSeats), " +
+            "\"\(Ride.descriptionKeyName)\": \"\(descriptionText)\", " +
+            "\"\(Ride.seriesKeyName)\": \(series)" +
+            "}"
         do {
             let ride = try Ride(JSONDecoder(jsonString.data(using: .utf8)))
-            XCTAssertTrue(ride.id == id && ride.driverId == driverId && ride.startDate == startDate && ride.endDate == endDate && ride.startPlaceId == startPlaceId && ride.endPlaceId == endPlaceId && ride.flexibleStartPlace == flexibleStartPlace && ride.flexibleEndPlace == flexibleEndPlace && ride.price == price && ride.numberOfSeats == numberOfSeats && ride.descriptionText == descriptionText && ride.series == series)
+            XCTAssertTrue(
+                ride.id == id &&
+                    ride.driverId == driverId &&
+                    ride.startDate == startDate &&
+                    ride.endDate == endDate &&
+                    ride.startPlaceId == startPlaceId &&
+                    ride.endPlaceId == endPlaceId &&
+                    ride.flexibleStartPlace == flexibleStartPlace &&
+                    ride.flexibleEndPlace == flexibleEndPlace &&
+                    ride.price == price &&
+                    ride.numberOfSeats == numberOfSeats &&
+                    ride.descriptionText == descriptionText &&
+                    ride.series == series
+            )
         } catch {
             XCTFail()
         }
