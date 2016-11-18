@@ -27,13 +27,16 @@ class WebsocketManager: WebsocketConnection {
     }
 
     let connection: WebSocketI
+    let reconnector: WebSocketReconnector
 
     private init(config: WebsocketConfiguration) {
         self.connection = WebSocket(url: config.url)
+        self.reconnector = WebSocketReconnector(delegate: self.connection)
     }
 
     private init(websocketI: WebSocketI) {
         self.connection = websocketI
+        self.reconnector = WebSocketReconnector(delegate: self.connection)
     }
 
     // MARK: WebsocketConnection
@@ -41,6 +44,9 @@ class WebsocketManager: WebsocketConnection {
     func send(message: WebsocketMessageSerializable) {
         let decoder = JSONDecoder(message.messageDictionary)
         if messageContainsType(decodedMessage: decoder) {
+            let message = decoder.print()
+            print(message)
+            print(self.connection.isConnected)
             self.connection.send(string: decoder.print())
         }
     }
@@ -74,7 +80,7 @@ protocol WebsocketConfiguration {
 
 }
 
-protocol WebSocketI {
+protocol WebSocketI: WebSocketReconnectorDelegate {
 
     func send(string: String)
     var delegate: WebSocketDelegate? { get set }
@@ -85,6 +91,10 @@ extension WebSocket: WebSocketI {
 
     func send(string: String) {
         self.write(string: string)
+    }
+
+    func reconnect() {
+        self.connect()
     }
 
 }

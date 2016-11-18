@@ -12,7 +12,7 @@ struct WebsocketConfig: WebsocketConfiguration {
 
     var url: URL {
         get {
-            if let url = URL(string: "wss://locahost/") {
+            if let url = URL(string: "ws://localhost:8080") {
                 return url
             }
             fatalError()

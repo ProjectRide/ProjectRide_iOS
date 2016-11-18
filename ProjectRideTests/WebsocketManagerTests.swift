@@ -39,10 +39,24 @@ class WebsocketMockClass: WebSocketI {
 
     var message: String?
     var delegate: WebSocketDelegate? = nil
+    var shouldDisplayAsConnected: Bool = true
+    var didAttemptToReconnect: Bool = false
+
+    init(shouldDisplayAsConnected: Bool = true) {
+        self.shouldDisplayAsConnected = shouldDisplayAsConnected
+    }
 
     func send(string: String) {
         self.message = string
         print(self.message)
+    }
+
+    func reconnect() {
+        self.didAttemptToReconnect = true
+    }
+
+    var isConnected: Bool {
+        return self.shouldDisplayAsConnected
     }
 
 }

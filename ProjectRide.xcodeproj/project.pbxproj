@@ -29,6 +29,8 @@
 		EA3A397D1DD630B0005061C1 /* WebsocketManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A397C1DD630B0005061C1 /* WebsocketManagerTests.swift */; };
 		EA3A397F1DD63DC0005061C1 /* LocationGatherer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A397E1DD63DC0005061C1 /* LocationGatherer.swift */; };
 		EA3A39811DD64293005061C1 /* LocationGathererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A39801DD64293005061C1 /* LocationGathererTests.swift */; };
+		EA3A39831DDF58BA005061C1 /* SocketReconnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A39821DDF58B9005061C1 /* SocketReconnector.swift */; };
+		EA3A39851DDF5B85005061C1 /* WebSocketReconnectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3A39841DDF5B85005061C1 /* WebSocketReconnectorTests.swift */; };
 		EA5781071DD0D330003170B3 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5781061DD0D330003170B3 /* Entity.swift */; };
 		EA5781091DD0D376003170B3 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5781081DD0D376003170B3 /* Car.swift */; };
 		EA57810B1DD0D3AB003170B3 /* CarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57810A1DD0D3AB003170B3 /* CarTests.swift */; };
@@ -81,6 +83,8 @@
 		EA3A397C1DD630B0005061C1 /* WebsocketManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsocketManagerTests.swift; sourceTree = "<group>"; };
 		EA3A397E1DD63DC0005061C1 /* LocationGatherer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationGatherer.swift; sourceTree = "<group>"; };
 		EA3A39801DD64293005061C1 /* LocationGathererTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationGathererTests.swift; sourceTree = "<group>"; };
+		EA3A39821DDF58B9005061C1 /* SocketReconnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketReconnector.swift; sourceTree = "<group>"; };
+		EA3A39841DDF5B85005061C1 /* WebSocketReconnectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketReconnectorTests.swift; sourceTree = "<group>"; };
 		EA5781061DD0D330003170B3 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		EA5781081DD0D376003170B3 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		EA57810A1DD0D3AB003170B3 /* CarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarTests.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3A39711DD61DCB005061C1 /* WebsocketManager.swift */,
+				EA3A39821DDF58B9005061C1 /* SocketReconnector.swift */,
 				EA3A39741DD620EA005061C1 /* WebsocketConfig.swift */,
 			);
 			name = Websocket;
@@ -248,6 +253,7 @@
 				EA3A39781DD62EA4005061C1 /* PositionTests.swift */,
 				EA3A397C1DD630B0005061C1 /* WebsocketManagerTests.swift */,
 				EA3A39801DD64293005061C1 /* LocationGathererTests.swift */,
+				EA3A39841DDF5B85005061C1 /* WebSocketReconnectorTests.swift */,
 			);
 			path = ProjectRideTests;
 			sourceTree = "<group>";
@@ -481,6 +487,7 @@
 				EACD4CC51DCBA0C000431684 /* AppDelegate.swift in Sources */,
 				EA76F29A1DCCC879000D5814 /* User.swift in Sources */,
 				EA3A39701DD6190C005061C1 /* Position.swift in Sources */,
+				EA3A39831DDF58BA005061C1 /* SocketReconnector.swift in Sources */,
 				EA3A39751DD620EA005061C1 /* WebsocketConfig.swift in Sources */,
 				EA3A38E91DD32194005061C1 /* ApiConfigImpl.swift in Sources */,
 				EA3A396C1DD6166D005061C1 /* LocationTracker.swift in Sources */,
@@ -502,6 +509,7 @@
 				EA3A397D1DD630B0005061C1 /* WebsocketManagerTests.swift in Sources */,
 				EA3A38E01DD226D5005061C1 /* PlaceFactoryTests.swift in Sources */,
 				EA3A39791DD62EA4005061C1 /* PositionTests.swift in Sources */,
+				EA3A39851DDF5B85005061C1 /* WebSocketReconnectorTests.swift in Sources */,
 				EA57810B1DD0D3AB003170B3 /* CarTests.swift in Sources */,
 				EA3A396E1DD616F3005061C1 /* LocationTrackerTests.swift in Sources */,
 				EA3A39811DD64293005061C1 /* LocationGathererTests.swift in Sources */,
