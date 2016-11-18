@@ -21,10 +21,9 @@ class WebSocketReconnectorTests: XCTestCase {
         _ = Timer.scheduledTimer(withTimeInterval: WebSocketReconnector.timerInterval, repeats: false) { _ in
             expectaton.fulfill()
         }
-        waitForExpectations(timeout: WebSocketReconnector.timerInterval) {_ in
+        waitForExpectations(timeout: WebSocketReconnector.timerInterval + 3) {_ in
             XCTAssertTrue(webSocketMock.didAttemptToReconnect)
         }
     }
-
 
 }

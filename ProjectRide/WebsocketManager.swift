@@ -14,29 +14,28 @@ class WebsocketManager: WebsocketConnection {
 
     private static var instance: WebsocketManager?
 
-    static func sharedInstance(websocketConnection: WebSocketI? = nil) -> WebsocketManager {
+    static func sharedInstance(websocketConnection: WebSocketI? = nil, websocketSender: WebSocketMessageSenderI? = nil) -> WebsocketManager {
         guard let instance = self.instance else {
-            if let connection = websocketConnection {
-                self.instance = WebsocketManager(websocketI: connection)
+            if let connection = websocketConnection, let sender = websocketSender {
+                self.instance = WebsocketManager(websocketI: connection, sender: sender)
             } else {
-                self.instance = WebsocketManager(config: WebsocketConfig())
+                let connection = WebSocket(url: WebsocketConfig().url)
+                self.instance = WebsocketManager(websocketI: connection, sender: WebSocketMessageSender(connection: connection))
             }
             return self.sharedInstance()
         }
         return instance
     }
 
-    let connection: WebSocketI
-    let reconnector: WebSocketReconnector
+    private let connection: WebSocketI
+    private let reconnector: WebSocketReconnector
+    private let messageSender: WebSocketMessageSenderI
 
-    private init(config: WebsocketConfiguration) {
-        self.connection = WebSocket(url: config.url)
-        self.reconnector = WebSocketReconnector(delegate: self.connection)
-    }
-
-    private init(websocketI: WebSocketI) {
+    private init(websocketI: WebSocketI, sender: WebSocketMessageSenderI) {
         self.connection = websocketI
         self.reconnector = WebSocketReconnector(delegate: self.connection)
+        self.messageSender = sender
+        self.connection.onConnect = self.onConnect
     }
 
     // MARK: WebsocketConnection
@@ -45,10 +44,12 @@ class WebsocketManager: WebsocketConnection {
         let decoder = JSONDecoder(message.messageDictionary)
         if messageContainsType(decodedMessage: decoder) {
             let message = decoder.print()
-            print(message)
-            print(self.connection.isConnected)
-            self.connection.send(string: decoder.print())
+            self.messageSender.send(message: message)
         }
+    }
+
+    func onConnect(_: Void) -> Void {
+        self.messageSender.didSuccesfullyConnect()
     }
 
     private func messageContainsType(decodedMessage: JSONDecoder) -> Bool {
@@ -84,6 +85,7 @@ protocol WebSocketI: WebSocketReconnectorDelegate {
 
     func send(string: String)
     var delegate: WebSocketDelegate? { get set }
+    var onConnect: ((Void) -> Void)? { get set }
 
 }
 

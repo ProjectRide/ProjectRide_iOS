@@ -15,22 +15,28 @@ import JSONJoy
 class WebsocketManagerTests: XCTestCase {
 
     static let mockWS = WebsocketMockClass()
-    let manager = WebsocketManager.sharedInstance(websocketConnection: WebsocketManagerTests.mockWS)
+    static let mockSender = MockSender()
+    let manager = WebsocketManager.sharedInstance(websocketConnection: mockWS, websocketSender: mockSender)
 
     override func tearDown() {
-        WebsocketManagerTests.mockWS.message = nil
+        WebsocketManagerTests.mockSender.message = nil
     }
 
     func testSendMessage() {
         let mockMessage = MockMessage(addsType: true)
         manager.send(message: mockMessage)
-        XCTAssertTrue(WebsocketManagerTests.mockWS.message == mockMessage.messageString)
+        XCTAssertTrue(WebsocketManagerTests.mockSender.message == mockMessage.messageString)
     }
 
     func testShouldNotSendMessage() {
         let mockMessage = MockMessage(addsType: false)
         manager.send(message: mockMessage)
-        XCTAssertNil(WebsocketManagerTests.mockWS.message)
+        XCTAssertNil(WebsocketManagerTests.mockSender.message)
+    }
+
+    func testReactsToOnConnect() {
+        WebsocketManagerTests.mockWS.onConnect?()
+        XCTAssertTrue(WebsocketManagerTests.mockSender.didCallSuccesfullyConnect)
     }
 
 }
@@ -58,6 +64,8 @@ class WebsocketMockClass: WebSocketI {
     var isConnected: Bool {
         return self.shouldDisplayAsConnected
     }
+
+    var onConnect: ((Void) -> Void)?
 
 }
 
@@ -87,6 +95,21 @@ class MockMessage: WebsocketMessageSerializable {
     var messageString: String {
         let decoder = JSONDecoder(self.messageDictionary)
         return decoder.print()
+    }
+
+}
+
+class MockSender: WebSocketMessageSenderI {
+
+    var message: String?
+    var didCallSuccesfullyConnect: Bool = false
+
+    func send(message: String) {
+        self.message = message
+    }
+
+    func didSuccesfullyConnect() {
+        self.didCallSuccesfullyConnect = true
     }
 
 }
