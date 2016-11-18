@@ -10,9 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var locationTracker: LocationTracker?
+    var locationGatherer: LocationGatherer?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+//        self.locationTracker = LocationTracker.sharedInstance()
+//        self.locationGatherer = LocationGatherer(delegate: self.locationTracker!)
+//        do {
+//            try locationGatherer?.startUpdatingLocation()
+//        } catch {
+//            print("Error starting, not authed")
+//        }
     }
 
     override func didReceiveMemoryWarning() {

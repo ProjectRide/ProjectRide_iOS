@@ -14,15 +14,17 @@ class LocationGatherer: NSObject, CLLocationManagerDelegate {
     private let delegate: LocationGathererDelegate
     private let locationManager: CLLocationManager
     private var shouldUpdateLocation: Bool = false
+    private var authorizationStatus: CLAuthorizationStatus
 
-    init(delegate: LocationGathererDelegate, locationManager: CLLocationManager = CLLocationManager()) {
+    init(delegate: LocationGathererDelegate, locationManager: CLLocationManager = CLLocationManager(), status: CLAuthorizationStatus = CLLocationManager.authorizationStatus()) {
         self.delegate = delegate
         self.locationManager = locationManager
+        self.authorizationStatus = status
         super.init()
     }
 
     private func setupLocationManager() {
-        locationManager.delegate = self
+        self.locationManager.delegate = self
         self.locationManager.activityType = .automotiveNavigation
         self.locationManager.requestAlwaysAuthorization()
     }
@@ -30,7 +32,7 @@ class LocationGatherer: NSObject, CLLocationManagerDelegate {
     func startUpdatingLocation() throws {
         self.shouldUpdateLocation = true
         self.setupLocationManager()
-        if self.locationManager.allowsBackgroundLocationUpdates {
+        if self.authorizationStatus == .authorizedAlways {
             self.start()
             return
         }
@@ -49,7 +51,8 @@ class LocationGatherer: NSObject, CLLocationManagerDelegate {
     }
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if self.locationManager.allowsBackgroundLocationUpdates && self.shouldUpdateLocation {
+        self.authorizationStatus = status
+        if self.authorizationStatus == .authorizedAlways && self.shouldUpdateLocation {
             self.start()
         }
     }

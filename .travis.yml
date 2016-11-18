@@ -5,8 +5,11 @@ cache:
   - cocoapods # Caching Cocoa Pods to reduce build time
 
 before_install:
-  - pod repo update >/dev/null # need to do a repo update as the newest pods won't be available otherwise
   - gem install slather
+
+install:
+  - pod repo update >/dev/null # need to do a repo update as the newest pods won't be available otherwise
+  - pod install
 
 script:
   - swiftlint lint --config .swiftlint.yml

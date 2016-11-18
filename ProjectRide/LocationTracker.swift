@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 import JSONJoy
 
-class LocationTracker {
+class LocationTracker: LocationGathererDelegate {
 
     private static var instance: LocationTracker?
 
